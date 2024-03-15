@@ -92,13 +92,17 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a,
-#header .profile h1 a:hover {
+#header h1 a,
+#header h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
+#header .social-links button {
+  border-color: #212431;
+  border-width: 0px;
+}
 
-#header .profile .social-links a {
+#header .social-links a, #header .social-links button {
   font-size: 18px;
   display: inline-block;
   background: #212431;
@@ -113,7 +117,7 @@ h6 {
   transition: 0.3s;
 }
 
-#header .profile .social-links a:hover {
+#header .social-links a:hover, #header .social-links button:hover {
   background: #9e66af;
   color: #fff;
   text-decoration: none;

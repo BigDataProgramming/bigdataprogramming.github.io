@@ -91,7 +91,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scrool with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -109,7 +109,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -119,39 +119,7 @@
     }
   });
 
-  /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
+  
   /**
    * Animation on scroll
    */
@@ -163,5 +131,42 @@
       mirror: false
     })
   });
+  
 
 })()
+
+/**
+ * Social media buttons
+ */
+const link = "https://bigdataprogramming.github.io";
+const text = "Programming Big Data Applications: Scalable Tools and Frameworks for Your Needs";
+function shareOnFacebook() {
+  const facebookIntentURL = "https://www.facebook.com/sharer/sharer.php";
+  const contentQuery = `?u=${encodeURIComponent(link)}&quote=${encodeURIComponent(text)}`;
+  const shareURL =  facebookIntentURL + contentQuery;
+  window.open(shareURL, "_blank");
+}
+
+function shareOnTwitter() {
+  const twitterIntentURL = "https://twitter.com/intent/tweet";
+  const contentQuery = `?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`;
+  const shareURL = twitterIntentURL + contentQuery;
+  window.open(shareURL, "_blank");
+}
+
+function shareOnLinkedn() {
+  const url = "viber://pa?chatURI=" + encodeURIComponent(text + "\n" + link);
+  window.open(url, "_blank");
+}
+
+function shareOnWhatsApp() {
+  const url = "https://wa.me/?text=" + encodeURIComponent(text + "\n" + link);
+  window.open(url, "_blank");
+}
+
+function shareOnTelegram() {
+  const telegramIntentURL = "https://telegram.me/share/url";
+  const contentQuery = `?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`;
+  const shareURL = telegramIntentURL + contentQuery;
+  window.open(shareURL, "_blank");
+}
