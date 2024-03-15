@@ -459,9 +459,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Resume
+# Timeline Item
 --------------------------------------------------------------*/
-.resume .resume-title {
+.timeline .timeline-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -469,14 +469,14 @@ section {
   color: #050d18;
 }
 
-.resume .resume-item {
+.timeline .timeline-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
 }
 
-.resume .resume-item h4 {
+.timeline .timeline-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -486,7 +486,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.timeline .timeline-item h5 {
   font-size: 16px;
   background: #e4edf9;
   padding: 5px 15px;
@@ -495,19 +495,19 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item ul {
+.timeline .timeline-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item ul li {
+.timeline .timeline-item ul li {
   padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
+.timeline .timeline-item:last-child {
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
+.timeline .timeline-item::before {
   content: "";
   position: absolute;
   width: 16px;
