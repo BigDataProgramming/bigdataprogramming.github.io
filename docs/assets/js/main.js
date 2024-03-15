@@ -155,8 +155,10 @@ function shareOnTwitter() {
 }
 
 function shareOnLinkedn() {
-  const url = "viber://pa?chatURI=" + encodeURIComponent(text + "\n" + link);
-  window.open(url, "_blank");
+  const instagramIntentURL = "https://www.linkedin.com/shareArticle?mini=true";
+  const contentQuery = `&url=${encodeURIComponent(link)}&title=${encodeURIComponent(text)}`;
+  const shareURL = instagramIntentURL + contentQuery;
+  window.open(shareURL, "_blank");
 }
 
 function shareOnWhatsApp() {
