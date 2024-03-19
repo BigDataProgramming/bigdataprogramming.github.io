@@ -335,16 +335,39 @@
                     <a href="https://docs.docker.com/get-docker/" target="_blank">guide</a>.</p>
                 <p>After installing Docker, you must clone or download the repository:</p>
 
-                <div class="box">
+                <div class="box mb-4">
+                <div class="box mb-4">
                     <pre><code class="language-shell line-numbers">git clone https://github.com/BigDataProgramming/bigdataprogramming.github.io.git</code></pre>
                 </div>
 
-
                 <p>After downloading or cloning the repository, go into the project root folder and run the following
                     commands to deploy the cluster:</p>
-                <div class="box">
-                    <pre><code class="language-shell">make build
-docker-compose up</code></pre>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#linux" type="button" role="tab"
+                                aria-controls="home" aria-selected="true">Linux/Mac</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#windows" type="button" role="tab"
+                                aria-controls="profile" aria-selected="false">Windows</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="code-tabs">
+                    <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="box">
+                    <pre><code class="language-shell">cd bigdataprogramming.github.io
+bash build.sh
+docker compose up -d</code></pre>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="windows" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="box">
+                    <pre><code class="language-shell">cd bigdataprogramming.github.io
+build.bat
+docker compose up -d</code></pre>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="mt-3 alert alert-warning" role="alert">
@@ -523,7 +546,6 @@ docker-compose up</code></pre>
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-
     </div>
 </footer><!-- End  Footer -->
 
