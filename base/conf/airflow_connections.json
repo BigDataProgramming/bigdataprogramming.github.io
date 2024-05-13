@@ -1,0 +1,12 @@
+{
+  "api_weather": {
+    "conn_type": "http",
+    "description": "",
+    "login": "",
+    "password": null,
+    "host": "https://api.open-meteo.com/",
+    "port": null,
+    "schema": "",
+    "extra": "{}"
+  }
+}

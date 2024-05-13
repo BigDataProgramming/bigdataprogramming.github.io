@@ -1,0 +1,10 @@
+storm.zookeeper.port: 2181
+storm.zookeeper.servers: ["master"]
+storm.local.dir: "/tmp/storm"
+ui.port: 8089
+nimbus.seeds: ["master"]
+supervisor.slots.ports:
+  - 6700
+  - 6701
+  - 6702
+  - 6703

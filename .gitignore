@@ -1,1 +1,16 @@
 /.idea/
+/examples/5.3.3.1/target/
+/jupyter/custom/HiveUDF-1.0-SNAPSHOT-jar-with-dependencies.jar
+/jupyter/notebook/.ipynb_checkpoints/
+/examples/5.3.3.1/allFlickrRome.json
+/examples/5.3.4.1/target/
+/examples/5.3.4.1/project/
+/examples/5.3.1.1/project/target/
+/examples/5.3.1.1/project/project/
+/examples/5.3.1.1/project/project/target/
+/examples/5.3.1.1/target/
+/examples/5.3.1.1/target/scala-2.12/
+/examples/5.3.1.1/target/streams/
+/examples/4.2.1.4/target/
+/examples/5.3.2.1/python/models/
+/examples/5.3.2.1/target/
