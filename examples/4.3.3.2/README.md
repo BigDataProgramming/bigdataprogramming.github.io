@@ -21,7 +21,7 @@ the credentials for the Airflow UI have been set as follows:
 
 DAGs are automatically loaded at startup and shown in the Airflow UI (http://localhost:8881/home):
 
-![airflow_dags](../../assets/airflow_dags.png)
+![airflow_dags](../../docs/assets/img/airflow_dags.png)
 
 --- 
 
