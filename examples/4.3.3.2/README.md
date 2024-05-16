@@ -14,7 +14,12 @@ message, which will be inserted into the email sent by the ``EmailOperator``.
 
 ## How to run
 
-Use the Airflow UI to run DAGs and to monitor results. DAGs are automatically loaded at startup and shown in the Airflow UI (http://localhost:8881/home):
+Use the Airflow UI to run DAGs and to monitor results. Since this project is primarily for testing purposes,
+the credentials for the Airflow UI have been set as follows: 
+- USERNAME=_**admin**_
+- PASSWORD=_**admin**_
+
+DAGs are automatically loaded at startup and shown in the Airflow UI (http://localhost:8881/home):
 
 ![airflow_dags](../../assets/airflow_dags.png)
 
