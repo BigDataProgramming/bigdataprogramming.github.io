@@ -8,7 +8,7 @@ The proposed programming example shows how SparkSQL can be utilized to implement
 After retrieving data from a Hive table, it is stored in a ``DataFrame``, allowing for clustering using various machine learning libraries  (e.g., *Scikit-Learn*), without necessarily having to leverage any UDAF functions.
 
 ### Data description
-The Flickr dataset used in this example (```data/allFlickrRome.json```) contains social media items, which include the following fields:
+The Flickr dataset used in this example (```../5.3.3.1/data/allFlickrRome.tar.gz```) contains social media items, which include the following fields:
 
 - a textual description,
 - a pair of latitude and longitude that represents the coordinates where the post was created,
@@ -16,8 +16,7 @@ The Flickr dataset used in this example (```data/allFlickrRome.json```) contains
 
 ## How to run
 
-The application comes with a script that automatically builds the
-application and runs it on the Spark cluster.
+The application comes with a script that automatically builds the application and runs it on the Spark cluster.
 To launch the application simply open a terminal in the _master_ container:
 
 ```bash

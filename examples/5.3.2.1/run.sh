@@ -1,5 +1,7 @@
 #! /bin/bash
 sudo chown $(whoami):$(id -gn) -R .
+tar -zxf data/kddcup_sample_5_3_2_1.tar.gz -C data
+
 echo "Training models..."
 mkdir -p python/models
 python python/batchLearning.py
@@ -14,3 +16,4 @@ storm kill IntrusionDetection
 
 echo "Cleaning files..."
 rm -rf python/models
+rm data/*.csv

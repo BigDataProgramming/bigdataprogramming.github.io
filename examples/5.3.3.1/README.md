@@ -5,7 +5,7 @@ One leading trend in social media research involves analyzing geotagged data to 
 The proposed programming example shows how Apache Hive can be utilized to implement a data analytics application that extracts a suitable RoI by analyzing a large set of geotagged posts from social media. Posts are considered geotagged if they contain coordinates indicating the place of creation. Additionally, a post can be associated with a PoI if its text or tags refer to it. For instance, users may refer to the Colosseum using various keywords. Once all coordinates related to a PoI are extracted, a RoI is obtained by employing a spatial clustering algorithm like DBSCAN, forming a polygon enclosing the largest cluster of points.
 
 ### Data description
-The Flickr dataset used in this example (```data/allFlickrRome.json```) contains social media items, which include the following fields:
+The Flickr dataset used in this example (```data/allFlickrRome.tar.gz```) contains social media items, which include the following fields:
 
 - a textual description,
 - a pair of latitude and longitude that represents the coordinates where the post was created,

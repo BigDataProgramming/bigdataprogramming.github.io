@@ -10,6 +10,7 @@ spark = SparkSession.builder \
     .enableHiveSupport() \
     .getOrCreate()
 
+spark.sql("ADD JAR hdfs://master/user/custom/5.3.3/ion-hive3-serde-all-1.2.0.jar")
 spark.sql("DROP TABLE IF EXISTS posts")
 flickrData=spark.read.json("hdfs://master/user/custom/5.3.3/data/allFlickrRome.json")
 
