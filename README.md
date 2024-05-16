@@ -6,7 +6,7 @@ published by [World Scientific](https://www.worldscientific.com/). It contains t
 in the book.
 
 <p align="center">
-<img height="400px" style="margin: auto" src="./docs/assets/img/book-cover.png">
+<img height="400px" style="margin: auto" src="book-cover.png">
 </p>
 
 > Talia, D., Trunfio, P., Marozzo, F., Belcastro, L., Cantini, R., & Orsino, A. (2024).
