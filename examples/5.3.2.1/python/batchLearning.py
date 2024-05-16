@@ -33,7 +33,7 @@ nominal_cols = col_names[nominal_idx].tolist()
 binary_cols = col_names[binary_idx].tolist()
 numeric_cols = col_names[numeric_idx].tolist()
 
-X = pd.read_csv(f"{input_path}/kddcup_train_10.csv", names=header_names)
+X = pd.read_csv(f"{input_path}/kddcup_train_5_3_2_1.csv", names=header_names)
 y = X['attack_type']
 X = X.drop(['attack_type'], axis=1)
 

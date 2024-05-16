@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class ConnectionSpout implements IRichSpout {
 
-    String dataSource = "/opt/examples/5.3.2.1/data/kddcup_test_sample_10.csv";
+    String dataSource = "/opt/examples/5.3.2.1/data/kddcup_test_5_3_2_1.csv";
     public ConnectionSpout() {
     }
     public ConnectionSpout(String dataSource) {
