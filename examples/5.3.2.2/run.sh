@@ -5,10 +5,10 @@ INPUT=data
 
 sudo chown $(whoami):$(id -gn) -R .
 echo "Training models..."
-tar -zxf data/kddcup_data.tar.gz -C data
+tar -zxf data/kddcup_sample_5_3_2_2.tar.gz -C data
 hadoop fs -rm -R $CODE_PATH
 hadoop fs -mkdir -p $CODE_PATH
-hadoop fs -put -f data/kddcup_train_10.csv $CODE_PATH
+hadoop fs -put -f data/kddcup_train_5_3_2_2.csv $CODE_PATH
 
 # Offline training
 sbt assembly && \
@@ -19,17 +19,17 @@ spark-submit \
 --deploy-mode client \
 --master spark://master:7077 \
 hdfs://master:8020$CODE_PATH/intrusion-detection_2.12-1.0.jar "offline-training" \
-hdfs://master$CODE_PATH/kddcup_train_10.csv \
+hdfs://master$CODE_PATH/kddcup_train_5_3_2_2.csv \
 hdfs://master$CODE_PATH/models/
 
 hadoop fs -rm -R $REAL_TIME_PATH
 hadoop fs -mkdir -p $REAL_TIME_PATH
 
 # Path to the local text file
-LOCAL_FILE="data/kddcup_test_sample_10.csv"
+LOCAL_FILE="data/kddcup_test_5_3_2_2.csv"
 
 # Path to the file on HDFS
-hdfs_file="$REAL_TIME_PATH/kddcup_test_sample_10.csv"
+hdfs_file="$REAL_TIME_PATH/kddcup_test_5_3_2_2.csv"
 
 # Create an empty file on HDFS
 hdfs dfs -touchz $hdfs_file
