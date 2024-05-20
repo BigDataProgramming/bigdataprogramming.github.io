@@ -15,7 +15,6 @@ public class Flickr {
 	private final static DateTimeFormatter dateStringFormat = DateTimeFormat.forPattern("MMM dd, yyyy h:mm:ss a").withLocale(Locale.ENGLISH);
 	
 	private String userId;
-	private String username;
 	private double longitude;
 	private double latitude;
 	private LocalDateTime date;
@@ -58,7 +57,6 @@ public class Flickr {
 	public String export() {
 		JSONObject ret = new JSONObject();
 		ret.put("userId", userId);
-		ret.put("username", username);
 		ret.put("longitude", longitude);
 		ret.put("latitude", latitude);
 		ret.put("date", dateStringFormat.print(date));
@@ -69,7 +67,6 @@ public class Flickr {
 	public void importFromString(String s) {
 		JSONObject json = new JSONObject(s);
 		this.userId = json.getString("userId");
-		this.username = json.getString("username");
 		this.latitude = json.getDouble("latitude");
 		this.longitude = json.getDouble("longitude");
 		this.date = dateStringFormat.parseDateTime(json.getString("date")).toLocalDateTime();
@@ -80,7 +77,6 @@ public class Flickr {
 		try {
 			JSONObject jsonObject = new JSONObject(s);
 			this.userId = jsonObject.getJSONObject("owner").getString("id");
-			this.username = jsonObject.getJSONObject("owner").getString("username");
 			if (jsonObject.has("geoData")) {
 				JSONObject geo = jsonObject.getJSONObject("geoData");
 				this.longitude = geo.getDouble("longitude");
@@ -89,11 +85,8 @@ public class Flickr {
 			this.date = dateStringFormat.parseDateTime(jsonObject.getString("dateTaken")).toLocalDateTime();
 			this.roi = "";
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
-	}
-
-	public String getUsername() {
-		return username;
 	}
 
 	public void removeTime() {
