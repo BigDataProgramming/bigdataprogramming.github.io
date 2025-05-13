@@ -227,7 +227,7 @@ RUN mkdir -p /home/$USERNAME/.ssh/ && \
     touch /home/$USERNAME/.ssh/config && \
     chmod 600 /home/$USERNAME/.ssh/config
 
-COPY --chown=$USERNAME:$GROUPNAME --chmod=0600  ssh-keys/ /keys/
+COPY --chown=$USERNAME:$GROUPNAME --chmod=0777  ssh-keys/ /keys/
 
 RUN cat /keys/big_data_book.pub >> /home/$USERNAME/.ssh/authorized_keys && \
     cat /keys/config >> /home/$USERNAME/.ssh/config
